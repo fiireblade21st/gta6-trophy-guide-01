@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <header class="hero">
+    <p class="eyebrow">Grand Theft Auto VI · PlayStation 5 · 55 trophies · works offline</p>
+    <h1>Leonida Legend</h1>
+    <p class="lede">All 55 GTA VI trophies with a how-to for each, a four-phase route to the platinum, and a checklist that remembers itself in your browser. No account, no network — everything in this folder is the whole guide.</p>
+    <div class="meter" id="meter">
+      <div class="meter-track"><div class="meter-fill" id="barFill"></div></div>
+      <p class="meter-line" id="barText">Loading trophies…</p>
+      <p class="meter-tiers" id="tierCounts"></p>
+    </div>
+  </header>
+
+  <nav class="switcher" aria-label="Sections">
+    <button type="button" class="switch on" id="tabList" data-pane="list">Trophy Checklist</button>
+    <button type="button" class="switch" id="tabPlan" data-pane="plan">Route to Platinum</button>
+  </nav>
+
+  <main>
+    <section id="paneList" class="pane">
+      <aside class="alert" id="warnBanner">
+        <strong>One trophy can possibly be missed.</strong>
+        <span id="warnText">Positive Mental Attitude may hinge on a Chapter 1 meditation on the balcony at Jason's house that goes away after Chapter 1. Do it during the story — its how-to is below.</span>
+      </aside>
+
+      <div class="toolbar">
+        <label class="field">Search <input id="q" type="search" placeholder="Trophy, mission, activity…" autocomplete="off"></label>
+        <label class="field">Tier
+          <select id="gradeSel">
+            <option value="all">Every tier</option>
+            <option value="platinum">Platinum</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+          </select>
+        </label>
+        <div class="kinds" id="kindBar" role="group" aria-label="Filter by kind">
+          <button type="button" class="chip on" data-kind="all">All</button>
+          <button type="button" class="chip" data-kind="story">Story</button>
+          <button type="button" class="chip" data-kind="missable">Missable</button>
+          <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+          <button type="button" class="chip" data-kind="activities">Activities</button>
+          <button type="button" class="chip" data-kind="online">Online</button>
+        </div>
+        <label class="checkline"><input id="spoilerBox" type="checkbox"> Hide spoilers — keep the 28 secret trophies masked until earned</label>
+        <div class="actions">
+          <button id="exportBtn" type="button">Export progress</button>
+          <label class="filebtn">Import progress <input id="importInput" type="file" accept="application/json,.json"></label>
+          <button id="clearBtn" type="button">Reset</button>
+        </div>
+        <p class="note" id="note" aria-live="polite"></p>
+      </div>
+
+      <p class="showing" id="statusLine"></p>
+      <div class="cards" id="cards"></div>
+      <p class="none" id="empty" hidden>No trophies fit these filters. Clear the search or pick another kind.</p>
+    </section>
+
+    <section id="panePlan" class="pane" hidden>
+      <h2>Route to the platinum</h2>
+      <p class="plan-lede">Roughly 200 hours at difficulty 4/10 (PowerPyx). One playthrough, no difficulty settings, no online trophies, no DLC trophies — and keep cheats off for the whole run: any cheat disables trophies and saving. Sources: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a>, <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 Trophy Guide</a>.</p>
+      <div class="phases" id="stageList"></div>
+      <p class="plan-foot">Every phase lists the trophies it covers. Click a trophy name in a phase to jump to its how-to in the checklist.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Unofficial fan guide. Not affiliated with Rockstar Games; no Rockstar logo, artwork or game screenshots are used. Trophy titles and descriptions are shown as PlayStation publishes them; every how-to is written for this entry and cites its sources. List verified 20 November 2026 against <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> and cross-checked with PowerPyx, GTABase, EGamers, Insider Gaming and Radio Times.</p>
+    <p>Progress lives only in this browser (localStorage). Export downloads a JSON file; import reads one back. The app makes no network requests.</p>
+  </footer>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
